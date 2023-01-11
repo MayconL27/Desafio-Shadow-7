@@ -1,4 +1,4 @@
-package com.shadow.autenticacao.jwt.data;
+package com.shadow.autenticacao.data;
 
 import com.shadow.autenticacao.model.UsuarioModel;
 import lombok.Data;

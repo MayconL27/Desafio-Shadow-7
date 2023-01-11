@@ -1,6 +1,6 @@
 package com.shadow.autenticacao.service;
 
-import com.shadow.autenticacao.jwt.data.DetalheUsuarioData;
+import com.shadow.autenticacao.data.DetalheUsuarioData;
 import com.shadow.autenticacao.model.UsuarioModel;
 import com.shadow.autenticacao.repository.UsuarioRepository;
 import lombok.Data;
