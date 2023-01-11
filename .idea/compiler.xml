@@ -7,22 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="produto" />
+        <module name="usuario" />
         <module name="autenticacao" />
-        <module name="desafio" />
+        <module name="produto" />
+        <module name="consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="autenticacao" target="11" />
-      <module name="desafio" target="17" />
+      <module name="consumer" target="11" />
       <module name="produto" target="16" />
+      <module name="usuario" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="autenticacao" options="-parameters" />
-      <module name="desafio" options="-parameters" />
+      <module name="consumer" options="-parameters" />
       <module name="produto" options="-parameters" />
+      <module name="usuario" options="-parameters" />
     </option>
   </component>
 </project>
