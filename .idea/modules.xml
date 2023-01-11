@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Desafio-Shadow-7.iml" filepath="$PROJECT_DIR$/.idea/Desafio-Shadow-7.iml" />
       <module fileurl="file://$PROJECT_DIR$/autenticacao/autenticacao.iml" filepath="$PROJECT_DIR$/autenticacao/autenticacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usuario/desafio.iml" filepath="$PROJECT_DIR$/usuario/desafio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/produto/produto.iml" filepath="$PROJECT_DIR$/produto/produto.iml" />
     </modules>
   </component>
 </project>
