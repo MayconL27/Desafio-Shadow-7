@@ -1,6 +1,6 @@
 package com.consumer.feign.controller;
 
-import com.consumer.feign.client.PostClient;
+import com.consumer.feign.client.FeignServiceUtil;
 import com.consumer.feign.dto.PostDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("posts")
+@RequestMapping("/demo")
 public class PostController {
 
-    private PostClient postClient;
-    @GetMapping
+    private FeignServiceUtil feignServiceUtil;
+    @GetMapping("/list")
     public List<PostDTO> getAllPosts() {
-        return postClient.getAllPosts();
+        return feignServiceUtil.getAll();
     }
 
 }

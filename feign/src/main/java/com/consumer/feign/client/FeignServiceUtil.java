@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name = "post", url = "http://localhost:8082") // porta da API usuario
-public interface PostClient {
-    @GetMapping(value = "/posts")
-    List<PostDTO> getAllPosts();
+@FeignClient(name = "feign", url = "http://localhost:8082/usuario") // porta da API usuario
+public interface FeignServiceUtil {
+    @GetMapping(value = "/listartodos")
+    List<PostDTO> getAll();
+
 
 }

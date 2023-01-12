@@ -18,6 +18,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/usuario")
 @CrossOrigin(origins = "*", maxAge = 3600)/* Permitir acesso a qualquer fonte*/
 @Data
 public class UsuariosController {
