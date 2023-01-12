@@ -10,12 +10,14 @@
         <module name="usuario" />
         <module name="autenticacao" />
         <module name="produto" />
+        <module name="feign" />
         <module name="consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="autenticacao" target="11" />
       <module name="consumer" target="11" />
+      <module name="feign" target="11" />
       <module name="produto" target="16" />
       <module name="usuario" target="11" />
     </bytecodeTargetLevel>
@@ -24,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="autenticacao" options="-parameters" />
       <module name="consumer" options="-parameters" />
+      <module name="feign" options="-parameters" />
       <module name="produto" options="-parameters" />
       <module name="usuario" options="-parameters" />
     </option>
