@@ -39,7 +39,7 @@ public class UsuariosController {
     }
     @GetMapping(value = "listartodos")
     public ResponseEntity<List<Usuarios>> listarTodos(){
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(usuariosService.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(usuariosService.findAll());
     }
     @GetMapping(value = "buscarid") /* Com RequestParam */
     public ResponseEntity<Usuarios> buscarID(@RequestParam(name = "codigoid") UUID codigoID) {

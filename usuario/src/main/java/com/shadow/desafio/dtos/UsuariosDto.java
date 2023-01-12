@@ -15,6 +15,8 @@ public class UsuariosDto {
     @NotBlank
     private String email;
     @NotBlank
+    private String user;
+    @NotBlank
     private String senha;
     @NotBlank
     private String tipoUsuario;

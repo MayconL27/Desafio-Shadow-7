@@ -17,7 +17,7 @@
       <module name="autenticacao" target="11" />
       <module name="consumer" target="11" />
       <module name="produto" target="16" />
-      <module name="usuario" target="17" />
+      <module name="usuario" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
