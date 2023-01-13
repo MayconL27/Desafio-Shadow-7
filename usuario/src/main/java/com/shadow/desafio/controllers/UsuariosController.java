@@ -30,10 +30,8 @@ public class UsuariosController {
     @PostMapping(value = "salvar")
     public ResponseEntity<?> salvarUsuarios(@RequestBody Usuarios usuarios){
         if (!ValidarCPF.isCPF(usuarios.getCpf())) { /* Se retornar CPf falso: */
-            //throw new Exception("Cpf: " + usuarios.getCpf() + " está inválido.");
             return new ResponseEntity<String>("Cpf " + usuarios.getCpf() +" inválido", HttpStatus.OK);
         }
-
         usuarios.setSenha(encoder.encode(usuarios.getSenha())); /* BCrypt Senha encripitada */
         Usuarios user = usuariosService.save(usuarios);
         return new ResponseEntity<>(user,HttpStatus.CREATED);
