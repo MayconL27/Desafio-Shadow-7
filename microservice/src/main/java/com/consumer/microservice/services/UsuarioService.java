@@ -16,13 +16,21 @@ public class UsuarioService {
     UsuarioClient usuarioClient;
 
     public TokenDTO loginUser(Login loginDto) {
-        Usuario user = usuarioClient.loginUsuario(loginDto);
-        if (user == null) {
+        Usuario usuario = usuarioClient.loginUsuario(loginDto);
+        if (usuario == null) {
             throw new RuntimeException("Usuário inválido");
         }
-        String token = jwtToken.genrateToken(user);
+        String token = jwtToken.generateToken(usuario);
 
         return TokenDTO.builder().type("Bearer").token(token).build();
+    }
+
+    public boolean validateToken(String token) {
+        return jwtToken.tokenValid(token);
+    }
+
+    public String getTypeUser(String token) {
+        return jwtToken.tipoUsuario(token);
     }
 
 

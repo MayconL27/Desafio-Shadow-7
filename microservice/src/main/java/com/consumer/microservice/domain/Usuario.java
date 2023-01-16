@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class Usuario {
 
-    private String email;
-    private String name;
+    private String nome;
     private String cpf;
+    private String email;
     private String tipoUsuario;
+
 }
