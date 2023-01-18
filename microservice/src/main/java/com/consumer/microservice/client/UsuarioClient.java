@@ -13,14 +13,8 @@ public interface UsuarioClient {
     @GetMapping(value = "/usuario/listartodos") // listar todos os usuarios
     List<UsuarioDto> getAllUser();
 
-    @GetMapping(value = "/usuario/{codigoID}")
-    List<UsuarioDto> getIdUser();
-
-
-
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/usuario/login")
     Usuario loginUsuario(@RequestBody Login loginDTO);
-
 
 
 }

@@ -26,10 +26,5 @@ public class UsuarioController {
         return usuarioClient.getAllUser();
     }
 
-    public List<UsuarioDto> getIdUser(@PathVariable UUID codigoID) {
-        return usuarioClient.getIdUser();
-    }
-
-
 
 }
