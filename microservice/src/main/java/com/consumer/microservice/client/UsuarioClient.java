@@ -2,17 +2,25 @@ package com.consumer.microservice.client;
 
 import com.consumer.microservice.domain.Login;
 import com.consumer.microservice.domain.Usuario;
+import com.consumer.microservice.services.dto.UsuarioDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "feign", url = "http://localhost:8082/usuario") // porta da API usuario
+@FeignClient(name = "usuario", url = "http://localhost:8082") // porta da API usuario
 public interface UsuarioClient {
+    @GetMapping(value = "/usuario/listartodos") // listar todos os usuarios
+    List<UsuarioDto> getAllUser();
+
+    @GetMapping(value = "/usuario/{codigoID}")
+    List<UsuarioDto> getIdUser();
+
+
 
     @PostMapping(value = "/login")
     Usuario loginUsuario(@RequestBody Login loginDTO);
+
+
 
 }

@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @EnableFeignClients
-public class MicroserviceApplication {
+public class MicroserviceApplication { // port=8081
 
 	public static void main(String[] args) {
 		SpringApplication.run(MicroserviceApplication.class, args);

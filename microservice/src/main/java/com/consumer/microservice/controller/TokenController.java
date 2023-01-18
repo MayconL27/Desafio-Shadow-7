@@ -14,8 +14,4 @@ public class TokenController {
     UsuarioService usuarioService;
 
 
-
-
-
-
 }
