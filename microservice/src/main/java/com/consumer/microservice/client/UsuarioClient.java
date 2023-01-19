@@ -13,13 +13,6 @@ public interface UsuarioClient {
     @GetMapping(value = "/usuario/listartodos") // listar todos os usuarios
     List<UsuarioDto> getAllUser();
 
-<<<<<<<<< Temporary merge branch 1
-
-
-    @PostMapping(value = "/login")
-=========
-    @PostMapping(value = "/usuario/login")
->>>>>>>>> Temporary merge branch 2
     Usuario loginUsuario(@RequestBody Login loginDTO);
 
 
