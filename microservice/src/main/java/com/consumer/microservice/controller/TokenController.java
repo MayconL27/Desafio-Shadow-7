@@ -15,12 +15,13 @@ public class TokenController {
     @Autowired
     UsuarioService usuarioService;
 
-    @GetMapping(value = "/validatetoken")
+    @GetMapping(value = "/validatetoken") // Validar Token
     public boolean validarToken(@RequestHeader(HttpHeaders.AUTHORIZATION) String token) {
         String tkn = token.split(" ")[1];
         return usuarioService.validateToken(tkn);
     }
 
+    @GetMapping(value = "/tipousuario")
     public String getTypeUser(@RequestHeader(HttpHeaders.AUTHORIZATION) String token) {
         String tkn = token.split(" ")[1];
         return usuarioService.getTypeUser(tkn);
