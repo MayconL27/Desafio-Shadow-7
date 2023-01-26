@@ -41,7 +41,8 @@ public class JWTToken {
     public String tipoUsuario(String token) {
         try {
             Claims body = Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
-            return body.values().stream().toArray()[0].toString();
+            System.out.println(body.values().toString());
+            return body.values().stream().toArray()[2].toString();
         }
         catch (Exception e) {
             return e.getMessage();
